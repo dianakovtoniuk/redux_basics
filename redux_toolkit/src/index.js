@@ -17,3 +17,8 @@ const userBugs = selectBugsByUser(1)(store.getState());
 console.log('Bugs for User 1:', userBugs);
 
 console.log('Full State:', store.getState());
+
+store.dispatch({
+  type: 'error',
+  payload: { message: 'An error occurred.' }
+});
